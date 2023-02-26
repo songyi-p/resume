@@ -8,6 +8,9 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  corePlugins: {
+    preflight: false,
+  },
   theme: {
     extend: {
       colors: {
@@ -15,8 +18,20 @@ module.exports = {
         'deep-dark-green' : 'rgb(63, 65, 66)',
         'shadow-green' : '#808e95',
         'light-green' : ' #88c399'
-      }
+      },
+      animation: {
+        'flip': 'flip 2.5s ease-in-out',
+      },
+      keyframes: {
+        flip: {
+          '0%': { transform: 'rotateY(-180deg)' },
+          '100%': { transform: 'rotateY(0deg)' },
+        },
+      },
     },
+    screens: {
+      'md': {'max': '767px'},
+    }
   },
   plugins: [
     ({ addUtilities }) => {

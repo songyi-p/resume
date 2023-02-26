@@ -41,18 +41,18 @@ export default function Home() {
               <header>
                   <nav className='flex items-center bg-dark-green h-[60px]'>
                       <div className='flex items-baseline text-white'>
-                          <h1 className='text-2xl ml-5 mr-10 cursor-pointer'>Resume</h1>
-                          <div className='mr-10 cursor-pointer'>Business Card</div>
-                          <div className='cursor-pointer'>introduce-myself</div>
+                          <h1 className='text-2xl md:text-lg ml-5 mr-10 cursor-pointer'>Resume</h1>
+                          <div className='md:text-sm mr-10 md:mr-6 cursor-pointer'>Business Card</div>
+                          <div className='md:text-sm cursor-pointer'>introduce-myself</div>
                       </div>
                   </nav>
               </header>
               <section className='flex-full-center flex-col'>
-                  <h2 className='text-3xl font-serif text-deep-dark-green mb-8'>
+                  <h2 className='text-3xl md:text-lg font-serif text-deep-dark-green mb-8'>
                       열람하시는 회사의 이름을 입력해 주세요.
                   </h2>
-                  <form name={'submit_company_name'} onSubmit={onSubmit} className='flex gap-5 mb-6'>
-                      <input className='w-[500px] h-[50px] rounded-3xl border-solid border-2 border-dark-green px-12'
+                  <form name={'submit_company_name'} onSubmit={onSubmit} className='md:w-[90%] flex gap-5 md:gap-3 mb-6'>
+                      <input className='w-[500px] h-[50px] rounded-3xl border-solid border-2 border-dark-green px-12 md:px-4'
                              onChange={onChangeName}
                              onKeyDown={onKeyEnter}
                              required
@@ -63,15 +63,15 @@ export default function Home() {
                           Click
                       </button>
                   </form>
-                  <div className='text-sm font-serif mb-16'>( 회사에 대한 정보는 저장하지 않습니다. )</div>
+                  <div className='text-sm md:text-xs font-serif mb-16'>( 회사에 대한 정보는 저장하지 않습니다. )</div>
               </section>
           </section>
           <section className='item'>
               <section className='flex-full-center'>
-                  <div className="flex flex-col justify-end text-white bg-dark-green border-all w-[360px] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]">
+                  <div className={`${!!companyName && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-all w-[360px] md:w-[90%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
                       <h2>박 &nbsp;송 &nbsp;이</h2>
                       <ul className="flex-info">
-                          <li ref={nameRef} className="text-2xl mt-5 mb-2 tracking-wider">{companyName}</li>
+                          <li ref={nameRef} className="text-2xl mt-5 mb-3 tracking-wider">{companyName}</li>
                           <li className="mb-5">Frontend Developer</li>
                           <li className="text-sm mb-2">Tel) 010-8797-3323</li>
                           <li>
