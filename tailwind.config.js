@@ -8,23 +8,20 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  corePlugins: {
-    preflight: false,
-  },
   theme: {
     extend: {
       colors: {
         'dark-green' : 'rgb(15, 76, 78)',
         'deep-dark-green' : 'rgb(63, 65, 66)',
         'shadow-green' : '#808e95',
-        'light-green' : ' #88c399'
+        'light-green' : '#88c399'
       },
       animation: {
         'flip': 'flip 2.5s ease-in-out',
       },
       keyframes: {
         flip: {
-          '0%': { transform: 'rotateY(-180deg)' },
+          '0%': { transform: 'rotateY(-90deg)' },
           '100%': { transform: 'rotateY(0deg)' },
         },
       },
@@ -49,8 +46,11 @@ module.exports = {
           '@apply flex items-center gap-2 mb-[3px]' : {}
         },
         '.flex-info li>a' : {
-          '@apply text-[12px] hover:text-light-green' : {}
-        }
+          '@apply text-[11px] hover:text-light-green' : {}
+        },
+        '.absolute-center' : {
+          '@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' : {}
+        },
       });
     },
   ],

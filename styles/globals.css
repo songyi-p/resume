@@ -106,6 +106,32 @@ body {
   scroll-snap-stop:always;
 }
 
+.grid-box {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+          "a a a b"
+          "a a a c"
+          "d d e c";
+}
+
+.item-a {
+  grid-area: a;
+}
+.item-b {
+  grid-area: b;
+}
+.item-c {
+  grid-area: c;
+}
+.item-d {
+  grid-area: d;
+}
+.item-e {
+  grid-area: e;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

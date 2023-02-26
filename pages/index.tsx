@@ -3,8 +3,9 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import React, {FormEvent, useRef, useState} from "react";
 import { MdOutlineEmail } from "react-icons/md";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsFillCaretDownFill } from "react-icons/bs";
 import { SlNote } from "react-icons/sl";
+import GridModal from "@/components/GridModal";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -66,14 +67,14 @@ export default function Home() {
                   <div className='text-sm md:text-xs font-serif mb-16'>( 회사에 대한 정보는 저장하지 않습니다. )</div>
               </section>
           </section>
-          <section className='item'>
-              <section className='flex-full-center'>
-                  <div className={`${!!companyName && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-all w-[360px] md:w-[90%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
-                      <h2>박 &nbsp;송 &nbsp;이</h2>
+          <section ref={nameRef} className='item'>
+              <section className='relative flex-full-center'>
+                  <div className={`${!!companyName && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-all w-[330px] md:w-[90%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
+                      <h2 className="font-normal">박 &nbsp;송 &nbsp;이</h2>
                       <ul className="flex-info">
-                          <li ref={nameRef} className="text-2xl mt-5 mb-3 tracking-wider">{companyName}</li>
-                          <li className="mb-5">Frontend Developer</li>
-                          <li className="text-sm mb-2">Tel) 010-8797-3323</li>
+                          <li className="animate-pulse text-2xl mt-5 mb-2 tracking-wider">{companyName}</li>
+                          <li className="text-sm mb-5">Frontend Developer</li>
+                          <li className="text-xs mb-2">Tel) 010-8797-3323</li>
                           <li>
                               <MdOutlineEmail/>
                               <a href="mailto:songyi7091@gmaile.com">songyi7091@gmail.com</a>
@@ -87,6 +88,18 @@ export default function Home() {
                               <a href="https://velog.io/@songyi7091">https://velog.io/@songyi7091</a>
                           </li>
                       </ul>
+                  </div>
+                  <BsFillCaretDownFill className="animate-bounce absolute bottom-2 text-dark-green" size="24"/>
+              </section>
+          </section>
+          <section className='item'>
+              <section className='flex-full-center'>
+                  <div className="w-[68%] h-[76%] grid-box">
+                      <GridModal title="# Who?" color="blue" className="item-a"/>
+                      <div className="bg-gray-500 item-b">Main</div>
+                      <div className="bg-gray-500 item-c">Sidebar</div>
+                      <div className="bg-gray-500 item-d">Footer</div>
+                      <div className="bg-gray-500 item-e">Fin</div>
                   </div>
               </section>
           </section>
