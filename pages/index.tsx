@@ -69,7 +69,7 @@ export default function Home() {
           </section>
           <section ref={nameRef} className='item'>
               <section className='relative flex-full-center'>
-                  <div className={`${!!companyName && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-all w-[330px] md:w-[90%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
+                  <div className={`${companyName !== '' && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-all w-[330px] md:w-[90%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
                       <h2 className="font-normal">박 &nbsp;송 &nbsp;이</h2>
                       <ul className="flex-info">
                           <li className="animate-pulse text-2xl mt-5 mb-2 tracking-wider">{companyName}</li>
@@ -95,11 +95,11 @@ export default function Home() {
           <section className='item'>
               <section className='flex-full-center'>
                   <div className="w-[68%] h-[76%] grid-box">
-                      <GridModal title="# Who?" color="blue" className="item-a"/>
-                      <div className="bg-gray-500 item-b">Main</div>
-                      <div className="bg-gray-500 item-c">Sidebar</div>
-                      <div className="bg-gray-500 item-d">Footer</div>
-                      <div className="bg-gray-500 item-e">Fin</div>
+                      <GridModal title="# Who?" className="item-a bg-dark-green"/>
+                      <div className="bg-gray-100 item-b">Main</div>
+                      <GridModal title="# What?" className="item-c bg-blue-green"/>
+                      <GridModal title="# What?" className="item-d bg-olive-green"/>
+                      <div className="bg-gray-100 item-e">Fin</div>
                   </div>
               </section>
           </section>

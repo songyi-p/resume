@@ -109,6 +109,7 @@ body {
 .grid-box {
   display: grid;
   grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
           "a a a b"

@@ -14,14 +14,16 @@ module.exports = {
         'dark-green' : 'rgb(15, 76, 78)',
         'deep-dark-green' : 'rgb(63, 65, 66)',
         'shadow-green' : '#808e95',
-        'light-green' : '#88c399'
+        'light-green' : '#88c399',
+        'olive-green' : '#307D5D',
+        'blue-green' : '#3F7C80'
       },
       animation: {
         'flip': 'flip 2.5s ease-in-out',
       },
       keyframes: {
         flip: {
-          '0%': { transform: 'rotateY(-90deg)' },
+          '0%': { transform: 'rotateY(-180deg)' },
           '100%': { transform: 'rotateY(0deg)' },
         },
       },
@@ -50,6 +52,9 @@ module.exports = {
         },
         '.absolute-center' : {
           '@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' : {}
+        },
+        '.grid-shadow' : {
+          '@apply rounded-sm shadow-[rgba(0,0,0,0.35)_0px_5px_15px] hover:scale-[1.01]' : {}
         },
       });
     },

@@ -2,18 +2,17 @@ import {useRef, useState} from "react";
 
 interface GridBoxProps {
     title : string
-    color : string
     className: string
 }
 
-const GridModal = ({color, title, className} : GridBoxProps) => {
+const GridModal = ({title, className} : GridBoxProps) => {
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
     const openModal = () => dialogRef.current?.showModal();
 
     return (
         <>
-            <button className={className} onClick={openModal}>
+            <button className={`${className} text-4xl text-white opacity-70 grid-shadow`} onClick={openModal}>
                 {title}
             </button>
             <dialog ref={dialogRef}
