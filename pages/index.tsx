@@ -1,13 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import React, {FormEvent, useRef, useState} from "react";
+import React, {FormEvent, useEffect, useRef, useState} from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsFillCaretDownFill } from "react-icons/bs";
 import { SlNote } from "react-icons/sl";
 import GridModal from "@/components/GridModal";
-
-const inter = Inter({ subsets: ['latin'] })
+import GridSlider from "@/components/GridSlider";
+import Image from "next/image";
 
 export default function Home() {
     const [companyName, setCompanyName] = useState('');
@@ -28,6 +26,7 @@ export default function Home() {
             submitNameBtn();
         }
     };
+
 
   return (
     <>
@@ -94,12 +93,17 @@ export default function Home() {
           </section>
           <section className='item'>
               <section className='flex-full-center'>
-                  <div className="w-[68%] h-[76%] grid-box">
+                  <div className="relative grid-box w-[68%] h-[76%] md:w-[90%] md:h-[50%] md:gap-4">
                       <GridModal title="# Who?" className="item-a bg-dark-green"/>
-                      <div className="bg-gray-100 item-b">Main</div>
+                      <Image
+                          src="/images/me.jpg"
+                          alt="박송이"
+                          fill
+                          className="item-b object-cover"
+                      />
                       <GridModal title="# What?" className="item-c bg-blue-green"/>
                       <GridModal title="# What?" className="item-d bg-olive-green"/>
-                      <div className="bg-gray-100 item-e">Fin</div>
+                      <GridSlider/>
                   </div>
               </section>
           </section>

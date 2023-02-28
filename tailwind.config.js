@@ -20,16 +20,22 @@ module.exports = {
       },
       animation: {
         'flip': 'flip 2.5s ease-in-out',
+        'fadeIn' : 'fadeIn 0.3s ease-out'
       },
       keyframes: {
         flip: {
           '0%': { transform: 'rotateY(-180deg)' },
           '100%': { transform: 'rotateY(0deg)' },
         },
+        fadeIn : {
+          'from' : { opacity : 0 },
+          'to' : { opacity : 1 }
+        }
       },
     },
     screens: {
       'md': {'max': '767px'},
+      'laptop' : {'max' : '1440px', 'min' : '768px'}
     }
   },
   plugins: [

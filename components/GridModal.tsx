@@ -12,11 +12,11 @@ const GridModal = ({title, className} : GridBoxProps) => {
 
     return (
         <>
-            <button className={`${className} text-4xl text-white opacity-70 grid-shadow`} onClick={openModal}>
+            <button className={`${className} text-4xl md:text-xl text-white opacity-80 grid-shadow`} onClick={openModal}>
                 {title}
             </button>
             <dialog ref={dialogRef}
-                    className="absolute-center w-[72%] h-[68%] p-8 rounded-2xl shadow-[rgba(0,0,0,0.1)_0px_4px_12px] overflow-y-scroll">
+                    className="animate-fadeIn absolute-center w-[72%] h-[68%] md:w-[90%] md:h-[54%] p-8 rounded-2xl shadow-[rgba(0,0,0,0.1)_0px_4px_12px] overflow-y-auto">
                 모달임!
                 <form method="dialog">
                     <button>CLOSE</button>
