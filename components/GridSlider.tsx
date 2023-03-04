@@ -13,24 +13,32 @@ const GridSlider = () => {
         autoplaySpeed: 2000,
         slidesToShow: 1, // 한번에 몇개 슬라이드 보여줄 것인지
         slidesToScroll: 1,
-        centerMode: false,
-        pauseOnHover: false
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint : 767,
+                settings: {
+                    dots: false,
+                }
+            }
+        ]
     };
 
     return (
         <div className="item-e">
-            <Slider className='item-e relative' {...settings}>
+            <Slider className='relative' {...settings}>
                 {
                     ['리팩토링 회고', '2023 신년계획', '백오피스 TS 전환기', '브런치 회고', '1차프로젝트 회고', 'kukka 회고'].map((el, i)=>
                         {return (
-                            <Image
-                                key={el}
-                                src={`/images/velog_${i+1}.png`}
-                                alt={el}
-                                width="350"
-                                height="250"
-                                className="object-fill"
-                            />
+                            <a href="https://velog.io/@songyi7091" key={el}>
+                                <Image
+                                    src={`/images/velog_${i+1}.png`}
+                                    alt={el}
+                                    width="600"
+                                    height="400"
+                                    className="object-fill hover:scale-[1.02] cursor-pointer"
+                                />
+                            </a>
                         )}
                     )
                 }

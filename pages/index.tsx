@@ -6,6 +6,7 @@ import { SlNote } from "react-icons/sl";
 import GridModal from "@/components/GridModal";
 import GridSlider from "@/components/GridSlider";
 import Image from "next/image";
+import Who from "@/components/modal/Who";
 
 export default function Home() {
     const [companyName, setCompanyName] = useState('');
@@ -47,6 +48,7 @@ export default function Home() {
                       </div>
                   </nav>
               </header>
+
               <section className='flex-full-center flex-col'>
                   <h2 className='text-3xl md:text-lg font-serif text-deep-dark-green mb-8'>
                       열람하시는 회사의 이름을 입력해 주세요.
@@ -66,9 +68,10 @@ export default function Home() {
                   <div className='text-sm md:text-xs font-serif mb-16'>( 회사에 대한 정보는 저장하지 않습니다. )</div>
               </section>
           </section>
+
           <section ref={nameRef} className='item'>
               <section className='relative flex-full-center'>
-                  <div className={`${companyName !== '' && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-all w-[330px] md:w-[90%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
+                  <div className={`${companyName !== '' && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-solid-black w-[330px] md:w-[90%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
                       <h2 className="font-normal">박 &nbsp;송 &nbsp;이</h2>
                       <ul className="flex-info">
                           <li className="animate-pulse text-2xl mt-5 mb-2 tracking-wider">{companyName}</li>
@@ -91,18 +94,19 @@ export default function Home() {
                   <BsFillCaretDownFill className="animate-bounce absolute bottom-2 text-dark-green" size="24"/>
               </section>
           </section>
+
           <section className='item'>
               <section className='flex-full-center'>
                   <div className="relative grid-box w-[68%] h-[76%] md:w-[90%] md:h-[50%] md:gap-4">
-                      <GridModal title="# Who?" className="item-a bg-dark-green"/>
+                      <Who />
                       <Image
                           src="/images/me.jpg"
                           alt="박송이"
                           fill
                           className="item-b object-cover"
                       />
-                      <GridModal title="# What?" className="item-c bg-blue-green"/>
-                      <GridModal title="# What?" className="item-d bg-olive-green"/>
+                      <GridModal title="# Tech Stack" className="item-c bg-blue-green"/>
+                      <GridModal title="# Strength" className="item-d bg-olive-green"/>
                       <GridSlider/>
                   </div>
               </section>

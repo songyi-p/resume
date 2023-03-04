@@ -44,8 +44,11 @@ module.exports = {
         '.flex-full-center': {
           '@apply w-full h-full flex justify-center items-center': {}
         },
-        '.border-all' : {
+        '.border-solid-black' : {
           '@apply border border-solid border-black' : {}
+        },
+        '.border-solid-gray' : {
+          '@apply border border-solid border-gray-300' : {}
         },
         '.flex-center' : {
           '@apply flex justify-center items-center' : {}
@@ -61,6 +64,9 @@ module.exports = {
         },
         '.grid-shadow' : {
           '@apply rounded-sm shadow-[rgba(0,0,0,0.35)_0px_5px_15px] hover:scale-[1.01]' : {}
+        },
+        '.initial' : {
+          '@apply w-[80px] h-[80px] mx-3 font-light text-6xl flex-center rounded-[50%] bg-dark-green opacity-80 text-white' : {}
         },
       });
     },
