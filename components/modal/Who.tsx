@@ -52,7 +52,7 @@ const Who = () => {
             </Initial>
             <Initial initial="Y" word="Yesterday">
                 <b>어제를 되돌아보는 것의 가치를 아는 사람</b>입니다.<br/>
-                1주 회고를 기록해오며 '성장'이란<br/>
+                {`1주 회고를 기록해오며 '성장'이란`}<br/>
                 어제보다 나은 내가 아닌, 어제의 미숙함을 받아들이는 과정임을 배우고 있습니다.
             </Initial>
             <h3 className="mt-28 laptop:mt-16 text-2xl md:text-sm flex justify-end items-end">
