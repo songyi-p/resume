@@ -19,7 +19,7 @@ export const Initial = ({initial, word, children} : InitialProps) => {
                 {initial}
             </div>
             <button onClick={onClickWord}
-                    className="w-28 p-4 ml-6 mr-10 md:mx-0 text-center border-solid-gray rounded-lg word-shadow">
+                    className="w-28 p-4 ml-6 mr-10 md:mx-0 text-center blue-btn rounded-lg">
                 {word}
             </button>
             {
@@ -57,7 +57,7 @@ const Who = () => {
             </Initial>
             <h3 className="mt-28 laptop:mt-16 text-2xl md:text-sm flex justify-end items-end">
                 저는 프론트엔드 개발자
-                <span className="px-2 text-4xl md:text-2xl text-dark-green">박송이</span>입니다.
+                <span className="px-2 text-4xl md:text-2xl text-blue">박송이</span>입니다.
             </h3>
             <BsFillCaretDownFill className="md:hidden absolute bottom-4 right-8 text-dark-green" size="24"/>
         </GridModal>

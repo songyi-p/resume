@@ -72,7 +72,7 @@ export default function Home() {
 
           <section ref={nameRef} className='item'>
               <section className='relative flex-full-center'>
-                  <div className={`${companyName !== '' && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-solid-black w-[330px] md:w-[90%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
+                  <div className={`${companyName !== '' && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-solid-black w-[330px] md:w-[80%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
                       <h2 className="font-normal">박 &nbsp;송 &nbsp;이</h2>
                       <ul className="flex-info">
                           <li className="animate-pulse text-2xl mt-5 mb-2 tracking-wider">{companyName}</li>

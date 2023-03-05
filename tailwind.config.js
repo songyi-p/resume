@@ -71,7 +71,10 @@ module.exports = {
           '@apply rounded-sm shadow-[rgba(0,0,0,0.35)_0px_5px_15px] hover:scale-[1.01]' : {}
         },
         '.initial' : {
-          '@apply w-[80px] h-[80px] md:w-[50px] md:h-[50px] mx-3 md:mx-1 font-light text-6xl md:text-3xl flex-center rounded-[50%] bg-dark-green opacity-80 text-white' : {}
+          '@apply w-[80px] h-[80px] md:w-[50px] md:h-[50px] mx-3 md:mx-1 font-light text-blue text-6xl md:text-3xl flex-center rounded-[50%] border border-solid border-blue opacity-80' : {}
+        },
+        '.blue-btn' : {
+          '@apply text-blue bg-sky-blue hover:shadow-[2px_2px_12px_#BFD1FF] active:shadow-[inset_4px_4px_4px_#C4CBDF]' : {}
         },
       });
     },

@@ -18,7 +18,7 @@ const GridModal = ({title, className, children} : GridBoxProps) => {
                 {title}
             </button>
             <dialog ref={dialogRef}
-                    className="animate-fadeIn relative absolute-center w-[72%] h-[68%] md:w-[90%] md:h-[54%] p-8 md:p-4 rounded-2xl shadow-[rgba(0,0,0,0.1)_0px_4px_12px] overflow-y-auto">
+                    className="animate-fadeIn relative absolute-center w-[72%] h-[68%] md:w-[90%] p-8 md:p-4 rounded-2xl shadow-[rgba(0,0,0,0.1)_0px_4px_12px] overflow-y-auto">
                 {children}
                 <form method="dialog">
                     <button className="absolute top-4 right-5">

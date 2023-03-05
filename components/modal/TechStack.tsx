@@ -32,7 +32,7 @@ const TechStack = () => {
                                         fill
                                     />
                                 </button>
-                                <div className="mt-3 px-2 py-3 md:p-1 md:text-sm font-medium bg-sky-blue text-blue rounded-[20px] hover:scale-[1.02]">
+                                <div className="mt-3 px-2 py-3 md:p-1 md:text-sm md:font-normal font-medium blue-btn rounded-[20px]">
                                     {data.alt}
                                 </div>
                             </div>
