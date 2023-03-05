@@ -7,6 +7,7 @@ import GridModal from "@/components/GridModal";
 import GridSlider from "@/components/GridSlider";
 import Image from "next/image";
 import Who from "@/components/modal/Who";
+import TechStack from "@/components/modal/TechStack";
 
 export default function Home() {
     const [companyName, setCompanyName] = useState('');
@@ -105,7 +106,7 @@ export default function Home() {
                           fill
                           className="item-b object-cover"
                       />
-                      <GridModal title="# Tech Stack" className="item-c bg-blue-green"/>
+                      <TechStack/>
                       <GridModal title="# Strength" className="item-d bg-olive-green"/>
                       <GridSlider/>
                   </div>

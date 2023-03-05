@@ -3,15 +3,21 @@ import Image from 'next/image';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+interface VelogDataType {
+    address : string
+    alt : string
+}
 
 const GridSlider = () => {
+    const velogData = require('/public/data/velog_data.json');
+
     const settings = {
         dots: true,
         infinite: true,
-        arrows: false, //화살표 (양옆 버튼) 구현할 것인지
-        autoplay: true, //자동 재생 할 것인지
+        arrows: false,
+        autoplay: true,
         autoplaySpeed: 2000,
-        slidesToShow: 1, // 한번에 몇개 슬라이드 보여줄 것인지
+        slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnHover: false,
         responsive: [
@@ -28,12 +34,12 @@ const GridSlider = () => {
         <div className="item-e">
             <Slider className='relative' {...settings}>
                 {
-                    ['리팩토링 회고', '2023 신년계획', '백오피스 TS 전환기', '브런치 회고', '1차프로젝트 회고', 'kukka 회고'].map((el, i)=>
+                    velogData?.map((data : VelogDataType, i : number)=>
                         {return (
-                            <a href="https://velog.io/@songyi7091" key={el}>
+                            <a href={data.address} key={data.alt}>
                                 <Image
                                     src={`/images/velog_${i+1}.png`}
-                                    alt={el}
+                                    alt={data.alt}
                                     width="600"
                                     height="400"
                                     className="object-fill hover:scale-[1.02] cursor-pointer"

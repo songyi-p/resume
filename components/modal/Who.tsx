@@ -14,12 +14,12 @@ export const Initial = ({initial, word, children} : InitialProps) => {
     const onClickWord = () => setShowDesc(prev => !prev);
 
     return (
-        <div className="flex items-center my-8">
+        <div className="flex items-center md:flex-col md:items-center md:gap-4 my-16 laptop:my-8">
             <div className="initial">
                 {initial}
             </div>
             <button onClick={onClickWord}
-                    className="w-28 p-4 ml-6 mr-10 text-center border-solid-gray rounded-lg word-shadow">
+                    className="w-28 p-4 ml-6 mr-10 md:mx-0 text-center border-solid-gray rounded-lg word-shadow">
                 {word}
             </button>
             {
@@ -35,7 +35,7 @@ export const Initial = ({initial, word, children} : InitialProps) => {
 const Who = () => {
     return (
         <GridModal title="# Who?" className="item-a bg-dark-green">
-            <h2 className="flex items-center mt-6 mb-10 text-4xl">
+            <h2 className="flex items-center my-6 laptop:my-4 text-4xl md:text-base">
                 저의 이름은
                 <div className="initial">P</div>
                 <div className="initial">S</div>
@@ -55,11 +55,11 @@ const Who = () => {
                 1주 회고를 기록해오며 '성장'이란<br/>
                 어제보다 나은 내가 아닌, 어제의 미숙함을 받아들이는 과정임을 배우고 있습니다.
             </Initial>
-            <h3 className="mt-16 text-2xl flex justify-end items-end">
+            <h3 className="mt-28 laptop:mt-16 text-2xl md:text-sm flex justify-end items-end">
                 저는 프론트엔드 개발자
-                <span className="px-2 text-4xl text-dark-green">박송이</span>입니다.
+                <span className="px-2 text-4xl md:text-2xl text-dark-green">박송이</span>입니다.
             </h3>
-            <BsFillCaretDownFill className="absolute bottom-4 right-8 text-dark-green" size="24"/>
+            <BsFillCaretDownFill className="md:hidden absolute bottom-4 right-8 text-dark-green" size="24"/>
         </GridModal>
     )
 }

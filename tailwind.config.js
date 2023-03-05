@@ -16,7 +16,9 @@ module.exports = {
         'shadow-green' : '#808e95',
         'light-green' : '#88c399',
         'olive-green' : '#307D5D',
-        'blue-green' : '#3F7C80'
+        'blue-green' : '#3F7C80',
+        'sky-blue' : '#ECF0FF',
+        'blue' : '#3B6BE7'
       },
       animation: {
         'flip': 'flip 2.5s ease-in-out',
@@ -44,20 +46,23 @@ module.exports = {
         '.flex-full-center': {
           '@apply w-full h-full flex justify-center items-center': {}
         },
-        '.border-solid-black' : {
-          '@apply border border-solid border-black' : {}
-        },
-        '.border-solid-gray' : {
-          '@apply border border-solid border-gray-300' : {}
-        },
         '.flex-center' : {
           '@apply flex justify-center items-center' : {}
+        },
+        '.flex-col-center' : {
+          '@apply flex flex-col justify-center items-center' : {}
         },
         '.flex-info li:nth-child(n+4)' : {
           '@apply flex items-center gap-2 mb-[3px]' : {}
         },
         '.flex-info li>a' : {
           '@apply text-[11px] hover:text-light-green' : {}
+        },
+        '.border-solid-black' : {
+          '@apply border border-solid border-black' : {}
+        },
+        '.border-solid-gray' : {
+          '@apply border border-solid border-gray-300' : {}
         },
         '.absolute-center' : {
           '@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' : {}
@@ -66,7 +71,7 @@ module.exports = {
           '@apply rounded-sm shadow-[rgba(0,0,0,0.35)_0px_5px_15px] hover:scale-[1.01]' : {}
         },
         '.initial' : {
-          '@apply w-[80px] h-[80px] mx-3 font-light text-6xl flex-center rounded-[50%] bg-dark-green opacity-80 text-white' : {}
+          '@apply w-[80px] h-[80px] md:w-[50px] md:h-[50px] mx-3 md:mx-1 font-light text-6xl md:text-3xl flex-center rounded-[50%] bg-dark-green opacity-80 text-white' : {}
         },
       });
     },
