@@ -15,11 +15,8 @@ export const Initial = ({initial, word, children} : InitialProps) => {
 
     return (
         <div className="flex items-center md:flex-col md:items-center md:gap-4 my-16 laptop:my-8">
-            <div className="initial">
-                {initial}
-            </div>
-            <button onClick={onClickWord}
-                    className="w-28 p-4 ml-6 mr-10 md:mx-0 text-center blue-btn rounded-lg">
+            <div className="initial">{initial}</div>
+            <button onClick={onClickWord} className="w-28 p-4 ml-6 mr-10 md:mx-0 text-center blue-btn rounded-lg">
                 {word}
             </button>
             {

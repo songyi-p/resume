@@ -1,4 +1,4 @@
-import {useRef, useState} from "react";
+import {useRef} from "react";
 import { CgCloseR } from "react-icons/cg";
 import BaseLayoutProps from "@/types/BaseLayoutProps";
 
@@ -14,7 +14,7 @@ const GridModal = ({title, className, children} : GridBoxProps) => {
 
     return (
         <>
-            <button className={`${className} px-4 text-3xl md:text-xl text-white opacity-80 grid-shadow`} onClick={openModal}>
+            <button onClick={openModal} className={`${className} px-4 text-3xl md:text-xl text-white opacity-80 grid-shadow`}>
                 {title}
             </button>
             <dialog ref={dialogRef}
@@ -27,7 +27,6 @@ const GridModal = ({title, className, children} : GridBoxProps) => {
                 </form>
             </dialog>
         </>
-
     )
 }
 
