@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import React, {FormEvent, useEffect, useRef, useState} from "react";
+import Head from 'next/head';
+import React, {FormEvent, useRef, useState} from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsFillCaretDownFill } from "react-icons/bs";
 import { SlNote } from "react-icons/sl";
@@ -38,7 +38,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="font-Gowon">
           <section className='item'>
               <header>
                   <nav className='flex items-center bg-dark-green h-[60px]'>
@@ -51,7 +51,7 @@ export default function Home() {
               </header>
 
               <section className='flex-full-center flex-col'>
-                  <h2 className='text-3xl md:text-lg font-serif text-deep-dark-green mb-8'>
+                  <h2 className='text-3xl md:text-lg font-Nanum text-deep-dark-green mb-8'>
                       열람하시는 회사의 이름을 입력해 주세요.
                   </h2>
                   <form name={'submit_company_name'} onSubmit={onSubmit} className='md:w-[90%] flex gap-5 md:gap-3 mb-6'>
@@ -70,7 +70,7 @@ export default function Home() {
               </section>
           </section>
 
-          <section ref={nameRef} className='item'>
+          <section ref={nameRef} className='item font-sans'>
               <section className='relative flex-full-center'>
                   <div className={`${companyName !== '' && 'animate-flip'} flex flex-col justify-end text-white bg-dark-green border-solid-black w-[330px] md:w-[80%] h-[500px] p-8 shadow-[10px_10px_2px_#808e95]`}>
                       <h2 className="font-normal">박 &nbsp;송 &nbsp;이</h2>
@@ -104,6 +104,7 @@ export default function Home() {
                           src="/images/me.jpg"
                           alt="박송이"
                           fill
+                          sizes='(min-width: 60em) 24vw, (min-width: 28em) 45vw, 100vw'
                           className="item-b object-cover"
                       />
                       <TechStack/>

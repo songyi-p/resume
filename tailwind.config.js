@@ -34,6 +34,10 @@ module.exports = {
           'to' : { opacity : 1 }
         }
       },
+      fontFamily: {
+        'Nanum': ['"Nanum Myeongjo"', 'cursive'],
+        'Gowon': ['"Gowun Batang"', 'cursive'],
+      },
     },
     screens: {
       'md': {'max': '767px'},

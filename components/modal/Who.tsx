@@ -55,7 +55,7 @@ const Who = () => {
                 {`1주 회고를 기록해오며 '성장'이란`}<br/>
                 어제보다 나은 내가 아닌, 어제의 미숙함을 받아들이는 과정임을 배우고 있습니다.
             </Initial>
-            <h3 className="mt-28 laptop:mt-16 text-2xl md:text-sm flex justify-end items-end">
+            <h3 className="mt-32 laptop:mt-18 text-2xl md:text-sm flex justify-end items-end">
                 저는 프론트엔드 개발자
                 <span className="px-2 text-4xl md:text-2xl text-blue">박송이</span>입니다.
             </h3>

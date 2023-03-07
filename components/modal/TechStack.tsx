@@ -30,9 +30,10 @@ const TechStack = () => {
                                         src={data.src}
                                         alt={data.alt}
                                         fill
+                                        sizes='(min-width: 60em) 24vw, (min-width: 28em) 45vw, 100vw'
                                     />
                                 </button>
-                                <div className="mt-3 px-2 py-3 md:p-1 md:text-sm md:font-normal font-medium blue-btn rounded-[20px]">
+                                <div className="mt-3 px-2 py-3 md:p-1 md:text-sm font-semibold md:font-normal blue-btn rounded-[20px]">
                                     {data.alt}
                                 </div>
                             </div>
