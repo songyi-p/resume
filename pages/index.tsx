@@ -3,11 +3,11 @@ import React, {FormEvent, useRef, useState} from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsFillCaretDownFill } from "react-icons/bs";
 import { SlNote } from "react-icons/sl";
-import GridModal from "@/components/GridModal";
 import GridSlider from "@/components/GridSlider";
 import Image from "next/image";
 import Who from "@/components/modal/Who";
 import TechStack from "@/components/modal/TechStack";
+import Strength from "@/components/modal/Strength";
 
 export default function Home() {
     const [corpName, setCorpName] = useState('');
@@ -99,15 +99,17 @@ export default function Home() {
               <section className="flex-full-center">
                   <div className="relative grid-box w-[68%] h-[76%] md:w-[90%] md:h-[50%] md:gap-4">
                       <Who />
-                      <Image
-                          src="/images/me.jpg"
-                          alt="박송이"
-                          fill
-                          sizes="(min-width: 60em) 24vw, (min-width: 28em) 45vw, 100vw"
-                          className="item-b object-cover"
-                      />
+                      <a href="https://github.com/songyi-p/">
+                          <Image
+                              src="/images/me.jpg"
+                              alt="박송이"
+                              fill
+                              sizes="(min-width: 60em) 24vw, (min-width: 28em) 45vw, 100vw"
+                              className="item-b object-cover cursor-pointer hover:scale-[1.01]"
+                          />
+                      </a>
                       <TechStack/>
-                      <GridModal title="# Strength" className="item-d bg-olive-green"/>
+                      <Strength/>
                       <GridSlider/>
                   </div>
               </section>

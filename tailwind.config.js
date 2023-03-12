@@ -62,20 +62,26 @@ module.exports = {
         '.flex-info li>a' : {
           '@apply text-[11px] hover:text-light-green' : {}
         },
+        '.absolute-center' : {
+          '@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' : {}
+        },
         '.border-solid-black' : {
           '@apply border border-solid border-black' : {}
         },
         '.border-solid-gray' : {
           '@apply border border-solid border-gray-300' : {}
         },
-        '.absolute-center' : {
-          '@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' : {}
-        },
         '.grid-shadow' : {
           '@apply rounded-sm shadow-[rgba(0,0,0,0.35)_0px_5px_15px] hover:scale-[1.01]' : {}
         },
         '.initial' : {
           '@apply w-[80px] h-[80px] md:w-[50px] md:h-[50px] mx-3 md:mx-1 font-light text-blue text-6xl md:text-3xl flex-center rounded-[50%] border border-solid border-blue opacity-80' : {}
+        },
+        '.strength-title' : {
+          '@apply flex-col-center gap-4 py-10 md:text-xs md:text-center blue-btn rounded-2xl pointer-events-none' : {}
+        },
+        '.strength-desc' : {
+          '@apply flex flex-col justify-center gap-2 col-span-2 md:text-[11px] border-solid-gray desc-shadow rounded-2xl py-4 px-6 md:p-2' : {}
         },
         '.blue-btn' : {
           '@apply text-blue bg-sky-blue hover:shadow-[2px_2px_12px_#BFD1FF] active:shadow-[inset_4px_4px_4px_#C4CBDF]' : {}
