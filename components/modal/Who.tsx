@@ -41,15 +41,15 @@ const Who = () => {
             </h2>
             <Initial initial="P" word="Priority">
                 <b>올해 저의 목표</b>입니다. <br/>
-                나아갈 길에 대한 이정표는 우선순위에 대한 고찰로부터 만들어진다고 생각합니다.
+                나아갈 길에 대한 이정표 🚩는 우선순위에 대한 고찰로부터 만들어진다고 생각합니다.
             </Initial>
             <Initial initial="S" word="Spirit">
                 건강한 정신과 긍정적인 마인드의 중요성을 알고 있습니다.<br/>
-                건강한 정신력을 바탕으로 <b>좋은 기운을 나눌 수 있는 사람</b>이 되고자 합니다.
+                건강한 정신력을 바탕으로 <b>좋은 기운을 나눌 수 있는 사람</b>이 되고자 합니다 ☺️
             </Initial>
             <Initial initial="Y" word="Yesterday">
                 <b>어제를 되돌아보는 것의 가치를 믿는 사람</b>입니다.<br/>
-                {`1주 회고를 기록해오며 '성장'이란`}<br/>
+                {`1주 회고를 기록해오며 '성장'이란 👣`}<br/>
                 어제보다 나은 내가 아닌, 어제의 미숙함을 받아들이는 과정임을 배우고 있습니다.
             </Initial>
             <h3 className="mt-32 laptop:mt-18 md:mt-8 text-2xl md:text-sm flex justify-end items-end">
