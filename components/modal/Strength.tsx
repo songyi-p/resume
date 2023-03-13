@@ -14,7 +14,7 @@ const Strength = () => {
                     <div>따라서 관계에 있어서는 청자가, 일에 있어서는 화자가 되는 편입니다.</div>
                 </div>
 
-                <div className="strength-desc items-end">
+                <div className="strength-desc items-end md:items-start">
                     <div>각각의 포인트를 캐치해 완성도 있는 결과물을 만들어낼 수 있습니다.</div>
                     <div>이제는 완전한 신기술의 탄생보다</div>
                     <div>강점을 엮어 새로운 가치를 창출해 내는 만큼, 꼭 필요한 역량이라고 생각합니다.</div>

@@ -23,8 +23,8 @@ const TechStack = () => {
                 {
                     techStackData?.map((data : TechStackDataType)=>{
                         return (
-                            <div key={data.alt} onClick={()=>onClickLogo(data.alt)} className="text-center cursor-pointer md:mt-4">
-                                <button className="relative w-[100px] h-[100px] md:w-[50px] md:h-[50px] hover:scale-[1.02]">
+                            <div key={data.alt} className="text-center cursor-pointer md:mt-4">
+                                <button className="relative w-[100px] h-[100px] md:w-[50px] md:h-[50px]">
                                     <Image
                                         src={data.src}
                                         alt={data.alt}
@@ -32,7 +32,7 @@ const TechStack = () => {
                                         sizes='(min-width: 60em) 24vw, (min-width: 28em) 45vw, 100vw'
                                     />
                                 </button>
-                                <strong className="mt-3 px-2 py-3 md:p-1 md:text-sm md:font-normal blue-btn rounded-[20px]">
+                                <strong onClick={()=>onClickLogo(data.alt)} className="mt-3 px-2 py-3 md:p-2 md:text-xs md:font-semibold blue-btn rounded-[20px]">
                                     {data.alt}
                                 </strong>
                             </div>
@@ -41,8 +41,8 @@ const TechStack = () => {
                 }
             </div>
 
-            <div className="h-[60%] flex-center">
-                <div className="w-[90%] h-[300px] laptop:h-[220px] md:h-[200px] mt-10 md:mt-2 md:p-2 flex-col-center border-solid-gray desc-shadow rounded-2xl">
+            <div className="h-[60%] md:h-[50%] flex-center md:items-start">
+                <div className="w-[90%] h-[300px] laptop:h-[220px] md:h-[200px] mt-10 md:p-2 flex-col-center border-solid-gray desc-shadow rounded-2xl">
                     {
                         techStackData?.map((data: TechStackDataType) => {
                             return (
