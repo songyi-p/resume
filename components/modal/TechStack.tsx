@@ -42,7 +42,7 @@ const TechStack = () => {
             </div>
 
             <div className="h-[60%] md:h-[50%] flex-center md:items-start">
-                <div className="w-[90%] h-[300px] laptop:h-[220px] md:h-[200px] mt-10 md:p-2 flex-col-center border-solid-gray desc-shadow rounded-2xl">
+                <div className="w-[90%] h-[300px] laptop:h-[220px] md:h-[200px] mt-10 md:mb-10 md:p-2 flex-col-center border-solid-gray desc-shadow rounded-2xl">
                     {
                         techStackData?.map((data: TechStackDataType) => {
                             return (
